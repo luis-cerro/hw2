@@ -86,6 +86,89 @@ puts "Roles: #{Role.all.count}"
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+#Create studios:
+warner_bros = Studio.new
+warner_bros["name"] = "Warner Bros."
+warner_bros.save
+
+puts "Studios: #{Studio.all.count}"
+
+#Create movies:
+wb = Studio.find_by({"name" => "Warner Bros."})
+
+batman_begins = Movie.new
+batman_begins["title"] = "Batman Begins"
+batman_begins["year_released"] = 2005
+batman_begins["rated"] = "PG-13"
+batman_begins["studio_id"] = wb["id"]
+batman_begins.save
+
+dark_knight = Movie.new
+dark_knight["title"] = "The Dark knight"
+dark_knight["year_released"] = 2008
+dark_knight["rated"] = "PG-13"
+dark_knight["studio_id"] = wb["id"]
+dark_knight.save
+
+dark_knight_rises = Movie.new
+dark_knight_rises["title"] = "The Dark Knight Rises"
+dark_knight_rises["year_released"] = 2012
+dark_knight_rises["rated"] = "PG-13"
+dark_knight_rises["studio_id"] = wb["id"]
+dark_knight_rises.save
+
+puts "Movies: #{Movie.all.count}"
+
+#Create actors:
+christian_bale = Actor.new
+christian_bale["name"] = "Christian Bale"
+christian_bale.save
+
+michael_cane = Actor.new
+michael_cane["name"] = "Michale Cane"
+michael_cane.save
+
+liam_neeson = Actor.new
+liam_neeson["name"] = "Liam Neeson"
+liam_neeson.save
+
+katie_holmes = Actor.new
+katie_holmes["name"] = "Katie Holmes"
+katie_holmes.save
+
+gary_oldman = Actor.new
+gary_oldman["name"] = "Gary Oldman"
+gary_oldman.save
+
+heath_ledger = Actor.new
+heath_ledger["name"] = "Heath Ledger"
+heath_ledger.save
+
+aaron_eckhart = Actor.new
+aaron_eckhart["name"] = "Aaron Eckhart"
+aaron_eckhart.save
+
+maggie_gyllenhall = Actor.new
+maggie_gyllenhall["name"] = "Maggie Gyllenhaall"
+maggie_gyllenhall.save
+
+tom_hardy = Actor.new
+tom_hardy["name"] = "Tom Hardy"
+tom_hardy.save
+
+joseph_gl = Actor.new
+joseph_gl["name"] = "Joseph Gordon-Levitt"
+joseph_gl.save
+
+anne_hathaway = Actor.new
+anne_hathaway["name"] = "Anne Hathaway"
+anne_hathaway.save
+
+puts "Actors: #{Actor.all.count}"
+
+#Create roles:
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
