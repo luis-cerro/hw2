@@ -285,6 +285,12 @@ puts "Movies"
 puts "======"
 puts ""
 
+movies = Movie.all
+
+for movie in movies
+    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
+end
+
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
@@ -293,6 +299,11 @@ puts ""
 puts "Top Cast"
 puts "========"
 puts ""
+
+roles = Role.all
+for role in roles
+    puts "#{role["movie_id"]} #{role["actor_id"]} #{role["character_name"]} "
+end
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
