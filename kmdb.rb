@@ -124,9 +124,9 @@ christian_bale = Actor.new
 christian_bale["name"] = "Christian Bale"
 christian_bale.save
 
-michael_cane = Actor.new
-michael_cane["name"] = "Michale Cane"
-michael_cane.save
+michael_caine = Actor.new
+michael_caine["name"] = "Michale Caine"
+michael_caine.save
 
 liam_neeson = Actor.new
 liam_neeson["name"] = "Liam Neeson"
@@ -167,6 +167,26 @@ anne_hathaway.save
 puts "Actors: #{Actor.all.count}"
 
 #Create roles:
+bb = Movie.find_by({"title" => "Batman Begins"})
+tdk = Movie.find_by({"title" => "The Dark Knight"})
+tdkr = Movie.find_by({"title" => "The Dark Knight Rises"})
+
+c_b = Actor.find_by({"name" => "Christian Bale"})
+m_c = Actor.find_by({"name" => "Michael Caine"})
+l_n = Actor.find_by({"name" => "Liam Neeson"})
+k_h = Actor.find_by({"name" => "Katie Holmes"})
+g_o = Actor.find_by({"name" => "Gary Oldman"})
+h_l = Actor.find_by({"name" => "Heath Ledger"})
+a_e = Actor.find_by({"name" => "Aaron Eckhart"})
+m_g = Actor.find_by({"name" => "Maggie Gyllenhaal"})
+t_h = Actor.find_by({"name" => "Tom Hardy"})
+j_g_l = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
+a_h = Actor.find_by({"name" => "Anne Hathaway"})
+
+#Batman Begins:
+bruce_wayne_bb = Role.new
+
+
 
 
 # Prints a header for the movies output
