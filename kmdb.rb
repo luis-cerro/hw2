@@ -104,7 +104,7 @@ batman_begins["studio_id"] = wb["id"]
 batman_begins.save
 
 dark_knight = Movie.new
-dark_knight["title"] = "The Dark knight"
+dark_knight["title"] = "The Dark Knight"
 dark_knight["year_released"] = 2008
 dark_knight["rated"] = "PG-13"
 dark_knight["studio_id"] = wb["id"]
@@ -125,7 +125,7 @@ christian_bale["name"] = "Christian Bale"
 christian_bale.save
 
 michael_caine = Actor.new
-michael_caine["name"] = "Michale Caine"
+michael_caine["name"] = "Michael Caine"
 michael_caine.save
 
 liam_neeson = Actor.new
@@ -149,7 +149,7 @@ aaron_eckhart["name"] = "Aaron Eckhart"
 aaron_eckhart.save
 
 maggie_gyllenhall = Actor.new
-maggie_gyllenhall["name"] = "Maggie Gyllenhaall"
+maggie_gyllenhall["name"] = "Maggie Gyllenhaal"
 maggie_gyllenhall.save
 
 tom_hardy = Actor.new
@@ -184,10 +184,101 @@ j_g_l = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
 a_h = Actor.find_by({"name" => "Anne Hathaway"})
 
 #Batman Begins:
+
 bruce_wayne_bb = Role.new
+bruce_wayne_bb["movie_id"] = bb["id"]
+bruce_wayne_bb["actor_id"] = c_b["id"]
+bruce_wayne_bb["character_name"] = "Bruce Wayne"
+bruce_wayne_bb.save
 
+alfred_bb = Role.new
+alfred_bb["movie_id"] = bb["id"]
+alfred_bb["actor_id"] = m_c["id"]
+alfred_bb["character_name"] = "Alfred"
+alfred_bb.save
 
+ras_al_ghul_bb = Role.new
+ras_al_ghul_bb["movie_id"] = bb["id"]
+ras_al_ghul_bb["actor_id"] = l_n["id"]
+ras_al_ghul_bb["character_name"] = "Ra's Al Ghul"
+ras_al_ghul_bb.save
 
+rachel_dawes_bb = Role.new
+rachel_dawes_bb["movie_id"] = bb["id"]
+rachel_dawes_bb["actor_id"] = k_h["id"]
+rachel_dawes_bb["character_name"] = "Rachel Dawes"
+rachel_dawes_bb.save
+
+commissioner_gordon_bb = Role.new
+commissioner_gordon_bb["movie_id"] = bb["id"]
+commissioner_gordon_bb["actor_id"] = g_o["id"]
+commissioner_gordon_bb["character_name"] = "Commissioner Gordon"
+commissioner_gordon_bb.save
+
+#The Dark Knight
+bruce_wayne_tdk = Role.new
+bruce_wayne_tdk["movie_id"] = tdk["id"]
+bruce_wayne_tdk["actor_id"] = c_b["id"]
+bruce_wayne_tdk["character_name"] = "Bruce Wayne"
+bruce_wayne_tdk.save
+
+joker_tdk = Role.new
+joker_tdk["movie_id"] = tdk["id"]
+joker_tdk["actor_id"] = h_l["id"]
+joker_tdk["character_name"] = "Joker"
+joker_tdk.save
+
+harvey_dent_tdk = Role.new
+harvey_dent_tdk["movie_id"] = tdk["id"]
+harvey_dent_tdk["actor_id"] = a_e["id"]
+harvey_dent_tdk["character_name"] = "Harvey Dent"
+harvey_dent_tdk.save
+
+alfred_tdk = Role.new
+alfred_tdk["movie_id"] = tdk["id"]
+alfred_tdk["actor_id"] = m_c["id"]
+alfred_tdk["character_name"] = "Alfred"
+alfred_tdk.save
+
+rachel_dawes_tdk = Role.new
+rachel_dawes_tdk["movie_id"] = tdk["id"]
+rachel_dawes_tdk["actor_id"] = m_g["id"]
+rachel_dawes_tdk["character_name"] = "Rachel Dawes"
+rachel_dawes_tdk.save
+
+#The Dark Knight Rises
+
+bruce_wayne_tdkr = Role.new
+bruce_wayne_tdkr["movie_id"] = tdkr["id"]
+bruce_wayne_tdkr["actor_id"] = c_b["id"]
+bruce_wayne_tdkr["character_name"] = "Bruce Wayne"
+bruce_wayne_tdkr.save
+
+commissioner_gordon_tdkr = Role.new
+commissioner_gordon_tdkr["movie_id"] = tdkr["id"]
+commissioner_gordon_tdkr["actor_id"] = g_o["id"]
+commissioner_gordon_tdkr["character_name"] = "Commissioner Gordon"
+commissioner_gordon_tdkr.save
+
+bane_tdkr = Role.new
+bane_tdkr["movie_id"] = tdkr["id"]
+bane_tdkr["actor_id"] = t_h["id"]
+bane_tdkr["character_name"] = "Bane"
+bane_tdkr.save
+
+john_blake_tdkr = Role.new
+john_blake_tdkr["movie_id"] = tdkr["id"]
+john_blake_tdkr["actor_id"] = j_g_l["id"]
+john_blake_tdkr["character_name"] = "John Blake"
+john_blake_tdkr.save
+
+selina_kyle_tdkr = Role.new
+selina_kyle_tdkr["movie_id"] = tdkr["id"]
+selina_kyle_tdkr["actor_id"] = a_h["id"]
+selina_kyle_tdkr["character_name"] = "Selina Kyle"
+selina_kyle_tdkr.save
+
+puts "Roles: #{Role.all.count}"
 
 # Prints a header for the movies output
 puts "Movies"
