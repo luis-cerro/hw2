@@ -77,10 +77,11 @@ Role.destroy_all
 
 # Generate models and tables, according to the domain model.
 # TODO!
-puts "Studios: #{Studio.all.count}"
-puts "Movies: #{Movie.all.count}"
-puts "Actors: #{Actor.all.count}"
-puts "Roles: #{Role.all.count}"
+
+#puts "Studios: #{Studio.all.count}"
+#puts "Movies: #{Movie.all.count}"
+#puts "Actors: #{Actor.all.count}"
+#puts "Roles: #{Role.all.count}"
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
@@ -91,7 +92,7 @@ warner_bros = Studio.new
 warner_bros["name"] = "Warner Bros."
 warner_bros.save
 
-puts "Studios: #{Studio.all.count}"
+#puts "Studios: #{Studio.all.count}"
 
 #Create movies:
 wb = Studio.find_by({"name" => "Warner Bros."})
@@ -117,7 +118,7 @@ dark_knight_rises["rated"] = "PG-13"
 dark_knight_rises["studio_id"] = wb["id"]
 dark_knight_rises.save
 
-puts "Movies: #{Movie.all.count}"
+#puts "Movies: #{Movie.all.count}"
 
 #Create actors:
 christian_bale = Actor.new
@@ -164,7 +165,7 @@ anne_hathaway = Actor.new
 anne_hathaway["name"] = "Anne Hathaway"
 anne_hathaway.save
 
-puts "Actors: #{Actor.all.count}"
+#puts "Actors: #{Actor.all.count}"
 
 #Create roles:
 bb = Movie.find_by({"title" => "Batman Begins"})
@@ -278,7 +279,7 @@ selina_kyle_tdkr["actor_id"] = a_h["id"]
 selina_kyle_tdkr["character_name"] = "Selina Kyle"
 selina_kyle_tdkr.save
 
-puts "Roles: #{Role.all.count}"
+#puts "Roles: #{Role.all.count}"
 
 # Prints a header for the movies output
 puts "Movies"
